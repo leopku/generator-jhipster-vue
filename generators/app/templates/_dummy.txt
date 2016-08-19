@@ -1,0 +1,2 @@
+hello vue!
+It's dummy.txt
