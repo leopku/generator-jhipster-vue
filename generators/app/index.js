@@ -48,7 +48,7 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: {
-    writeTemplates : function () {
+    writeTemplates: function () {
       this.baseName = jhipsterVar.baseName;
       this.packageName = jhipsterVar.packageName;
       this.angularAppName = jhipsterVar.angularAppName;
@@ -63,7 +63,9 @@ module.exports = yeoman.Base.extend({
       this.log('angularAppName=' + this.angularAppName);
       this.log('message=' + this.message);
 
-      this.template('_dummy.txt', 'dummy.txt', this, {});
+      //this.template('_dummy.txt', 'dummy.txt', this, {});
+      this.copy('.gitignore', '.gitignore');
+      this.copy('.babelrc', '.babelrc');
     },
 
     writeCommonFiles: function () {
